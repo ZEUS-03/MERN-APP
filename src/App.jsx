@@ -1,21 +1,27 @@
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
-import React, { useState } from 'react'
-import { ReactDOM } from 'react'
+import MainNavigation from "./shared/components/MainNavigation";
+import User from "./people/pages/User";
+
 const App = () => {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <div>
-      <h1>wanderer.com</h1>
-      <ul>
-        <li>All users</li>
-        <li>My Places</li>
-        <li>Add Place</li>
-        <li>Authenticate</li>
-      </ul>
+    <div className="bg-[#fffcfa]">
+      <Router basename="/">
+        <MainNavigation />
+        <Routes>
+          <Route path="/" Component={User} />
+        </Routes>
+      </Router>
     </div>
-  )
-}
+  );
+};
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<App/>)
+export default App;
