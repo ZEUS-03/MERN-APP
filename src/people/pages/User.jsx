@@ -9,10 +9,6 @@ const User = () => {
       image: "https://cdn2.sexnaked.net/img/256/256734.jpg",
     },
   ];
-  return (
-    <>
-      <UserList items={USER} />
-    </>
-  );
+  return <UserList items={USER} />;
 };
 export default User;

@@ -8,6 +8,7 @@ import {
 
 import MainNavigation from "./shared/components/MainNavigation";
 import User from "./people/pages/User";
+import UserPlaces from "./places/pages/UserPlaces";
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -18,6 +19,9 @@ const App = () => {
         <MainNavigation />
         <Routes>
           <Route path="/" Component={User} />
+        </Routes>
+        <Routes>
+          <Route path="/:userId/places" Component={UserPlaces} />
         </Routes>
       </Router>
     </div>
