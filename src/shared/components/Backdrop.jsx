@@ -6,7 +6,7 @@ const Backdrop = (props) => {
       className="fixed top-0 left-0 w-[100%] h-[100vh] bg-white bg-opacity-75 z-10"
       onClick={props.onClick}
     ></div>,
-    document.getElementById("drawer-hook")
+    document.getElementById("backdrop-hook")
   );
 };
 

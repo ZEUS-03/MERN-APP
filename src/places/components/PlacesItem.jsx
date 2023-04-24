@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PlacesItem = (props) => {
   return (
-    <li className="w-[50%] rounded-md bg-[#fde2cd] m-3">
+    <li className="w-[40%] rounded-md bg-[#fde2cd] m-3">
       <img
         className="w-[100%] h-auto p-2 rounded-lg"
         src={props.image}
@@ -14,13 +15,15 @@ const PlacesItem = (props) => {
         <p className="text-lg">{props.description}</p>
       </div>
       <div className="flex justify-center items-center">
-        <button className="mx-2 my-2 p-1 bg-orange-400 text-sm text-white rounded-md">
-          View on Map
+        <button className="mx-2 my-2 px-3 py-1 border border-[#cc183a] hover:bg-[#cc183a]  font-medium  hover:text-white text-md text-[#cc183a] rounded-sm">
+          VIEW ON MAP
         </button>
-        <button className="mx-2 my-2 p-1 bg-orange-400 text-sm text-white rounded-md">
-          Edit
-        </button>
-        <button className="mx-2 my-2 p-1 bg-red-400 text-sm text-white rounded-md">
+        <Link to={`places/${props.id}`}>
+          <button className="mx-2 my-2 px-3 py-1 bg-[#ce2242] hover:bg-[#ff0e3a] font-medium text-md text-white rounded-sm">
+            EDIT
+          </button>
+        </Link>
+        <button className="mx-2 my-2 px-3 py-1 bg-[#b81c0e] hover:bg-[#fe002f] font-medium text-md text-white rounded-sm">
           DELETE
         </button>
       </div>

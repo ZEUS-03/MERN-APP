@@ -19,6 +19,7 @@ const MainNavigation = (props) => {
       )}
       {drawerIsOpen && (
         <SideDrawer
+          show={drawerIsOpen}
           onClick={() => {
             setDrawerIsOpen(false);
           }}
