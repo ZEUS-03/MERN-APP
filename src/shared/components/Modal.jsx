@@ -5,7 +5,9 @@ import Backdrop from "./Backdrop";
 
 const ModelOverlay = (props) => {
   const content = (
-    <div className={props.className}>
+    <div
+      className={`flex flex-col justify-center items-center ${props.className}`}
+    >
       <header className={props.headerClass}>
         <h2>{props.header}</h2>
       </header>

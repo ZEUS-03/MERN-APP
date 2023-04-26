@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../../shared/components/Modal";
+import Map from "../../shared/components/Map";
 
 const PlacesItem = (props) => {
   const [showMap, setShowMap] = useState(false);
@@ -16,17 +17,19 @@ const PlacesItem = (props) => {
         header={props.address}
         footer={
           <button
-            className="mx-2 my-2 px-3 py-1 bg-[#b81c0e] hover:bg-[#fe002f] font-medium text-md text-white rounded-sm"
+            className="mx-2 my-2 px-3 py-1 bg-[#b81c0e] hover:bg-[#fe002f] font-medium text-md text-white rounded-sm "
             onClick={closeMapHandler}
           >
             CLOSE
           </button>
         }
-        className="fixed w-[40%] flex flex-col justify-center items-center mx-auto bg-white z-20 "
-        headerClass="justify-center font-semibold"
+        className="fixed w-[80%] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-lg bg-white z-20 border-2 border-black rounded-lg "
+        headerClass="font-semibold bg-orange-300 w-full text-lg rounded-t-md text-center p-3 "
         footerClass="justify-center"
       >
-        <div className="h-20 w-full">MAP</div>
+        <div className="w-full m-2 h-[30vh]">
+          <Map center={props.coordinates} />
+        </div>
       </Modal>
       <li className="w-[40%] rounded-md bg-[#fde2cd] m-3">
         <img
@@ -37,9 +40,9 @@ const PlacesItem = (props) => {
         <div className="flex flex-col justify-center items-center p-2 border-b-2 border-gray-300">
           <h2 className="text-xl font-bold">{props.title}</h2>
           <h2 className="text-lg font-semibold">{props.address}</h2>
-          <p className="text-lg">{props.description}</p>
+          <p className="text-lg p-1">{props.description}</p>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex flex-wrap justify-center items-center my-2">
           <button
             className="mx-2 my-2 px-3 py-1 border border-[#cc183a] hover:bg-[#cc183a]  font-medium  hover:text-white text-md text-[#cc183a] rounded-sm"
             onClick={openMapHandler}
