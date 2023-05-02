@@ -15,19 +15,19 @@ const PlacesItem = (props) => {
         show={showMap}
         onCancel={closeMapHandler}
         header={props.address}
+        className="fixed w-[80%] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-lg bg-white z-20 border-2 border-black rounded-lg "
+        headerClass="font-semibold bg-orange-300 w-full text-lg rounded-t-md text-center p-3 "
+        footerClass="justify-center"
         footer={
           <button
-            className="mx-2 my-2 px-3 py-1 bg-[#b81c0e] hover:bg-[#fe002f] font-medium text-md text-white rounded-sm "
+            className="flex w-[75px] mx-auto p-3 my-2 py-1 bg-[#b81c0e] hover:bg-[#fe002f] font-medium text-md text-white rounded-sm"
             onClick={closeMapHandler}
           >
             CLOSE
           </button>
         }
-        className="fixed w-[80%] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-lg bg-white z-20 border-2 border-black rounded-lg "
-        headerClass="font-semibold bg-orange-300 w-full text-lg rounded-t-md text-center p-3 "
-        footerClass="justify-center"
       >
-        <div className="w-full m-2 h-[30vh]">
+        <div className="w-[100%] h-[30vh]">
           <Map center={props.coordinates} />
         </div>
       </Modal>

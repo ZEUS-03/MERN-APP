@@ -12,6 +12,7 @@ const ModelOverlay = (props) => {
         <h2>{props.header}</h2>
       </header>
       <form
+        className="w-[100%] m-0 p-0"
         onSubmit={
           props.onSubmit
             ? props.onSubmit
