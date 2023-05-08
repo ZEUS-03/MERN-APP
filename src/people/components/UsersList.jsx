@@ -2,7 +2,7 @@ import UserItem from "./UserItem";
 
 const UserList = (props) => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center ">
       {props.items.length === 0 ? (
         <p>No user found!</p>
       ) : (

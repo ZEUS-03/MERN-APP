@@ -44,13 +44,13 @@ const PlacesItem = (props) => {
         </div>
         <div className="flex flex-wrap justify-center items-center my-2">
           <button
-            className="mx-2 my-2 px-3 py-1 border border-[#cc183a] hover:bg-[#cc183a]  font-medium  hover:text-white text-md text-[#cc183a] rounded-sm"
+            className="mx-2 my-2 px-3 py-1 border border-[#33b5e5] hover:bg-[#33b5e5]  font-medium  hover:text-white text-md text-[#0099CC] rounded-sm"
             onClick={openMapHandler}
           >
             VIEW ON MAP
           </button>
           <Link to={`places/${props.id}`}>
-            <button className="mx-2 my-2 px-3 py-1 bg-[#ce2242] hover:bg-[#ff0e3a] font-medium text-md text-white rounded-sm">
+            <button className="mx-2 my-2 px-3 py-1 bg-[#FF8800] hover:bg-[#ffaa49] font-medium text-md text-white rounded-sm">
               EDIT
             </button>
           </Link>
